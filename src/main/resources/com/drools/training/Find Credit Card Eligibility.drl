@@ -1,0 +1,13 @@
+package com.drools.training;
+
+rule "Find eligibility for credit card"
+
+when 
+
+person:Person(income >30000 && income < 40000 )
+
+then
+
+person.setCreditCardApproval("Yes");
+update(person);
+end
